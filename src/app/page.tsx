@@ -1,14 +1,15 @@
 "use client";
 import Header from "@/components/Header";
 import { createContext, useState } from "react";
-import isDark from "@/styles/index";
+import { isDark, transfer } from "@/styles/index";
 import Services from "@/components/Services";
 
-export const modeChanged: any = createContext({});
+const modeChanged: any = createContext({});
 export default function Home() {
   const [mode, setMode] = useState(true);
 
   const modeStyle = isDark(mode);
+  transfer(modeChanged);
 
   return (
     <div

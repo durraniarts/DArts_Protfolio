@@ -1,11 +1,13 @@
 "use client";
-import { modeChanged } from "@/app/page";
+// import { modeChanged } from "@/app/page";
+import { transfer } from "@/styles";
 import { useContext } from "react";
 import { Card } from "./ui/card";
 import data from "@/constants/data";
 import Image from "next/image";
 
 const Services = () => {
+  const theme = transfer();
   const {
     modeStyle: {
       card_color,
@@ -16,7 +18,7 @@ const Services = () => {
     },
     mode,
     setMode,
-  }: any = useContext(modeChanged);
+  }: any = useContext(theme[0]);
   return (
     <div
       className={` section-components  ${mode ? bg_color : "bg-white"} style={{

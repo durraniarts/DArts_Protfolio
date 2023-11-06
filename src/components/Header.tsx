@@ -1,5 +1,6 @@
 "use client";
-import { modeChanged } from "@/app/page";
+// import { modeChanged } from "@/app/page";
+import { transfer } from "@/styles";
 import Navbar from "./Navbar";
 import { useContext } from "react";
 import data from "@/constants/data";
@@ -8,13 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
+  const theme = transfer();
   const {
     modeStyle: { bg_color, text_color, opposite_color, card_gray_content },
     mode,
     setMode,
-  }: any = useContext(modeChanged);
+  }: any = useContext(theme[0]);
   const social = data.social_media;
-  // console.log(social.map());
 
   return (
     <div

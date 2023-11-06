@@ -1,6 +1,6 @@
 // export text and bg color with type of an object which also includes border
 
-export default function isDark(mode) {
+export function isDark(mode, theme) {
   if (mode) {
     return {
       bg_color: "#0F0E0E",
@@ -19,6 +19,15 @@ export default function isDark(mode) {
     opposite_color: "#0F0F0F",
     card_gray_content: "#7f848a",
   };
+}
+
+const arr = [];
+
+export function transfer(theme) {
+  if (arr.length === 0) {
+    arr.push(theme);
+  }
+  return arr;
 }
 // #3d4d49
 // #212832
