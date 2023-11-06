@@ -42,9 +42,9 @@ const Services = () => {
           {data.my_services.map((service, index) => {
             return (
               <Card
+                key={index}
                 className="relative flex flex-1 flex-col max-w-[300px]  bg-dark-green shadow-md shadow-black p-8 gap-8"
                 style={{ border: `1px solid ${mode ? "gray" : "black"}` }}
-                key={index}
               >
                 <p className="text-white small-text">{service.title}</p>
                 <div className="mt-7">

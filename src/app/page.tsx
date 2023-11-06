@@ -24,7 +24,6 @@ export default function Home() {
         <hr
           style={{ width: "80%", border: "1px #7f848a solid ", opacity: "0.5" }}
         />
-        <Header />
       </Mode.Provider>
     </div>
   );
