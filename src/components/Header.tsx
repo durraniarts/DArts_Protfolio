@@ -1,5 +1,5 @@
 "use client";
-import { mode_changed } from "@/app/page";
+import { modeChanged } from "@/app/page";
 import Navbar from "./Navbar";
 import { useContext } from "react";
 import data from "@/constants/data";
@@ -12,7 +12,7 @@ const Header = () => {
     modeStyle: { bg_color, text_color, opposite_color, card_gray_content },
     mode,
     setMode,
-  }: any = useContext(mode_changed);
+  }: any = useContext(modeChanged);
   const social = data.social_media;
   // console.log(social.map());
 
