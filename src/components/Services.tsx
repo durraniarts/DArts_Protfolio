@@ -1,5 +1,5 @@
 "use client";
-import { Mode } from "@/app/page";
+import { mode_changed } from "@/app/page";
 import { useContext } from "react";
 import { Card } from "./ui/card";
 import data from "@/constants/data";
@@ -16,7 +16,7 @@ const Services = () => {
     },
     mode,
     setMode,
-  }: any = useContext(Mode);
+  }: any = useContext(mode_changed);
   return (
     <div
       className={` section-components  ${mode ? bg_color : "bg-white"} style={{

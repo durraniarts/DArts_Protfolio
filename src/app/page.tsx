@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 import isDark from "@/styles/index";
 import Services from "@/components/Services";
 
-export const Mode = createContext({});
+export const mode_changed = createContext({});
 export default function Home() {
   const [mode, setMode] = useState(true);
 
@@ -15,7 +15,7 @@ export default function Home() {
       style={{ backgroundColor: modeStyle.bg_color }}
       className=" m-auto flex flex-col items-center min-h-[100vh]  "
     >
-      <Mode.Provider value={{ modeStyle, setMode, mode }}>
+      <mode_changed.Provider value={{ modeStyle, setMode, mode }}>
         <Header />
         <hr
           style={{ width: "80%", border: "1px #7f848a solid ", opacity: "0.5" }}
@@ -24,7 +24,7 @@ export default function Home() {
         <hr
           style={{ width: "80%", border: "1px #7f848a solid ", opacity: "0.5" }}
         />
-      </Mode.Provider>
+      </mode_changed.Provider>
     </div>
   );
 }
